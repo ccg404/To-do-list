@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popover Positioning</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-10 space-y-4">
+    <div class="flex justify-center items-center space-x-4">
+        <!-- Top Positioning -->
+        <div class="relative">
+            <button 
+                popovertarget="topPopover" 
+                class="bg-blue-500 text-white px-4 py-2 rounded"
+            >
+                Top Popover
+            </button>
+            <div 
+                popover 
+                id="topPopover"
+                class="absolute bottom-full left-1/2 -translate-x-1/2 -translate-y-2 
+                       bg-white border rounded shadow-lg p-4 mb-2"
+            >
+                Top Positioned Popover
+            </div>
+        </div>
+
+        <!-- Bottom Positioning -->
+        <div class="relative">
+            <button 
+                popovertarget="bottomPopover" 
+                class="bg-green-500 text-white px-4 py-2 rounded"
+            >
+                Bottom Popover
+            </button>
+            <div 
+                popover 
+                id="bottomPopover"
+                class="absolute top-full left-1/2 -translate-x-1/2 translate-y-2 
+                       bg-white border rounded shadow-lg p-4 mt-2"
+            >
+                Bottom Positioned Popover
+            </div>
+        </div>
+
+        <!-- Left Positioning -->
+        <div class="relative">
+            <button 
+                popovertarget="leftPopover" 
+                class="bg-purple-500 text-white px-4 py-2 rounded"
+            >
+                Left Popover
+            </button>
+            <div 
+                popover 
+                id="leftPopover"
+                class="absolute right-full top-1/2 -translate-y-1/2 -translate-x-2 
+                       bg-white border rounded shadow-lg p-4 mr-2"
+            >
+                Left Positioned Popover
+            </div>
+        </div>
+
+        <!-- Right Positioning -->
+        <div class="relative">
+            <button 
+                popovertarget="rightPopover" 
+                class="bg-red-500 text-white px-4 py-2 rounded"
+            >
+                Right Popover
+            </button>
+            <div 
+                popover 
+                id="rightPopover"
+                class="absolute left-full top-1/2 -translate-y-1/2 translate-x-2 
+                       bg-white border rounded shadow-lg p-4 ml-2"
+            >
+                Right Positioned Popover
+            </div>
+        </div>
+    </div>
+</body>
+</html>
